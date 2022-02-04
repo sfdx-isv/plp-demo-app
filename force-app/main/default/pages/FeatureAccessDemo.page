@@ -1,0 +1,36 @@
+<apex:page Controller="FeatureAccessDemoController">
+    <style>
+        td {
+            font-weight: bold; font-size: 120%;
+        }
+        h1 {
+            font-size: 150%
+        }
+    </style>
+
+    <h1>Feature Access Check Demo</h1>
+    <br/><br/>
+    
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:commandButton value="Can I access Feature A?" action="{!checkAccessFeatureA}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputText value="{!canAccessFeatureA}" style="color: {!featureAAccessResultColor};"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:commandButton value="Can I access Feature B?" action="{!checkAccessFeatureB}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem > 
+                    <apex:outputText value="{!canAccessFeatureB}" style="color: {!featureBAccessResultColor};"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>
