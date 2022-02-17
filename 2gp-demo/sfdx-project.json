@@ -5,7 +5,6 @@
       "default": true
     }
   ],
-  "name": "PLP Demo (2GP)",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "54.0"
 }
