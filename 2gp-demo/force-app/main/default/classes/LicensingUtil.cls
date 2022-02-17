@@ -28,7 +28,6 @@ public with sharing class LicensingUtil {
         return false;
     }
     
-    
     public static String getNamespace() {
         if (currentNamespace == null) {
             String classWithDotNotation = LicensingUtil.class.getName();
@@ -41,7 +40,8 @@ public with sharing class LicensingUtil {
         }
         return currentNamespace;
     }
-    
+
+    @TestVisible
     private static Boolean isDevOrg() {
         return String.isBlank(getNamespace());
     }
@@ -54,6 +54,7 @@ public with sharing class LicensingUtil {
         }
     }
     
+    @TestVisible
     private static Boolean isPackagingOrg() {
         return String.isNotBlank(getNamespace()) && packageNamespaces.contains(getNamespace()) && String.isBlank(getPackageId());
     }
