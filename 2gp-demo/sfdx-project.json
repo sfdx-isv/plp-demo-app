@@ -5,8 +5,7 @@
       "default": true
     }
   ],
-  "name": "testproject",
-  "namespace": "",
+  "name": "PLP Demo (2GP)",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "54.0"
 }
