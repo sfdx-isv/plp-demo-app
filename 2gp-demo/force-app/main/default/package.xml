@@ -8,10 +8,13 @@
         <members>FeatureAccessDemoController</members>
         <members>FeatureAccessDemoControllerTest</members>
         <members>LicensingUtil</members>
+        <members>DebugFeatureAccessDemoController</members>
+        <members>DebugFeatureAccessDemoControllerTest</members>
         <name>ApexClass</name>
     </types>
     <types>
         <members>FeatureAccessDemo</members>
+        <members>DebugFeatureAccessDemo</members>
         <name>ApexPage</name>
     </types>
     <types>
