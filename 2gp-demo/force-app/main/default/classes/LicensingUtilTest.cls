@@ -11,11 +11,6 @@ private class LicensingUtilTest {
     }
 
     @isTest
-    static void testIsPackagingOrg() {
-        Boolean result = LicensingUtil.isPackagingOrg();
-    }
-
-    @isTest
     static void testUserHasPackageLicense() {
         Boolean result = LicensingUtil.userHasPackageLicense();
     }

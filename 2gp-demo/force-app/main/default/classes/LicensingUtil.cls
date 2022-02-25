@@ -1,51 +1,47 @@
 public with sharing class LicensingUtil {
 	
- 	private static String currentNamespace = getNamespace();
-    private static Set<String> packageNamespaces = new Set<String> {'plpdp_mynamespace1', 'IsvlTdxDemo'};
-    
-	
+    /**
+     * Check access to the Licensed Custom Permission (LCP).
+     * 
+     * Returns: true
+     *  - Running automated tests
+     *  - Running in developer or packaging org
+     *  - User has access to LCP
+     */
     public static boolean hasAccessToLCP(String customPerm) {
-        // TODO: Confirm that the customPerm is not null, exists, and is a Licensed Custom Perm - otherwise throw exception
-        
-        /*
-        System.debug('debug Test.isRunningTest ' + Test.isRunningTest());
-        System.debug('debug isDevOrg ' + isDevOrg());
-        System.debug('debug isPackagingOrg ' + isPackagingOrg());
-        System.debug('debug userHasPackageLicense ' + userHasPackageLicense());
-        System.debug('debug FeatureManagement.checkPermission ' + FeatureManagement.checkPermission(customPerm));
-        System.debug('debug getNamespace ' + getNamespace());
-        System.debug('debug getPackageId ' + getPackageId());
-        */
-        
-        if(Test.isRunningTest() ||                           // bypass access check for automated tests
-           isDevOrg() ||                                     // bypass access check if within a developer org (without local namespace)
-           isPackagingOrg() ||                               // bypass access check if within your packaging org (with local namespace)
-           userHasPackageLicense() ||         				 // allow access if the user has a managed package license (for hybrid licensing)
-           FeatureManagement.checkPermission(customPerm)) {  // check for user's access for the feature gated by this LCP
+        if(Test.isRunningTest() ||
+           isDevOrg() ||
+           //userHasPackageLicense() ||         		     // Commented out since this method always returns true in scratch org context. Scratch orgs by default are on a "site-wide" package license
+           FeatureManagement.checkPermission(customPerm)) {
             return true;
         }
         
         return false;
     }
     
-    public static String getNamespace() {
-        if (currentNamespace == null) {
-            String classWithDotNotation = LicensingUtil.class.getName();
-
-            if (classWithDotNotation.contains('.')) {
-                currentNamespace = classWithDotNotation.substringBefore('.');
-            } else {
-                currentNamespace = '';
-            }
-        }
-        return currentNamespace;
-    }
-
-    @TestVisible
-    private static Boolean isDevOrg() {
-        return String.isBlank(getNamespace());
+    /**
+     * Return true for developer or packaging org.
+     * 
+     * When a component is accessed and if the component is not in a package then it could be either developer or packaging org. 
+     */
+    public static Boolean isDevOrg() {
+        return String.isBlank(getPackageId());
     }
     
+    /**
+     * Return true for Subscriber org (org where the package is installed)
+     * 
+     * When a component is accessed and if the component is in package which means package is installed and it is subscriber org.
+     */
+    public static Boolean isSubscriberOrg() {
+        return String.isNotBlank(getPackageId());
+    }
+    
+    /**
+     * Get packageId of the component that is currently executing.
+     * 
+     * Return either packageId or empty, depending on if the component is in package or not 
+     */
     public static String getPackageId() {
         try {
             return Packaging.getCurrentPackageId();
@@ -54,13 +50,14 @@ public with sharing class LicensingUtil {
         }
     }
     
-    @TestVisible
-    private static Boolean isPackagingOrg() {
-        return String.isNotBlank(getNamespace()) && packageNamespaces.contains(getNamespace()) && String.isBlank(getPackageId());
-    }
-        
+    /**
+     * Check if the user has access to the package via ONLY managed package license.
+     * 
+     * Note: returns true if package licensing for current org is set to "site-wide". 
+     * Scratch orgs and sandboxes are always on site-wide licensing for packages.
+     */
     public static boolean userHasPackageLicense() {
-            String packageId = getPackageId();
-            return String.isNotBlank(packageId) && UserInfo.hasPackageLicense(packageId);
+        String packageId = getPackageId();
+        return String.isNotBlank(packageId) && UserInfo.hasPackageLicense(packageId);
     }
 }
