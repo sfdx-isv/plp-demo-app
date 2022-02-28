@@ -6,7 +6,7 @@
     </classAccesses>
     <description>Provides access to pages, classes, and tabs required by the PLP &quot;Feature Access&quot; demo.</description>
     <hasActivationRequired>false</hasActivationRequired>
-    <label>Feature Access Demo User</label>
+    <label>Feature Access Demo</label>
     <pageAccesses>
         <apexPage>FeatureAccessDemo</apexPage>
         <enabled>true</enabled>
