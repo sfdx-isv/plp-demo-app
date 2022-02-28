@@ -69,10 +69,10 @@ sfdx force:org:open -u PLP-subscriber
 sfdx force:user:create -a PLP-test-user -f config/subscriber-user-def.json -u PLP-subscriber
 ```
 
-## Step Eleven: Assign the `Feature_Access_Demo_User` permset to the test user.
+## Step Eleven: Assign the `Feature_Access_Demo` permset to the test user.
 * This permset is needed for you to see the **Feature Access Demo** page in the subscriber org.
 ```
-sfdx force:user:permset:assign -u PLP-subscriber -n Feature_Access_Demo_User -o PLP-test-user
+sfdx force:user:permset:assign -u PLP-subscriber -n Feature_Access_Demo -o PLP-test-user
 ```
 
 ## Step Twelve: Open the subscriber demo scratch org as the TEST user in a DIFFERENT browser.
