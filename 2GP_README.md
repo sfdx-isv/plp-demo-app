@@ -55,7 +55,7 @@ sfdx force:org:create -n -c -a PLP-subscriber -f config/subscriber-scratch-def.j
 sfdx force:package:install -r -p "PLP Demo (2GP)@1.0.0-1" -w 10 -u PLP-subscriber
 ```
 
-## Step Eight: Open the subscriber demo scratch org.
+## Step Eight: Open the subscriber demo scratch org as the ADMIN user.
 ```
 sfdx force:org:open -u PLP-subscriber
 ```
@@ -64,11 +64,42 @@ sfdx force:org:open -u PLP-subscriber
 1. From Setup, in the Quick Find box, type `pack`, then click on `Installed Packages`.
 2. You should see one installed package named `PLP Demo (2GP)`.
 
-## Step Ten: Assign the `Feature_Access_Demo_User` permset to yourself.
+## Step Ten: Create a test user in the subscriber demo scratch org.
+```
+sfdx force:user:create -a PLP-test-user -f config/subscriber-user-def.json -u PLP-subscriber
+```
+
+## Step Eleven: Assign the `Feature_Access_Demo_User` permset to the test user.
 * This permset is needed for you to see the **Feature Access Demo** page in the subscriber org.
 ```
-sfdx force:user:permset:assign -u PLP-subscriber -n Feature_Access_Demo_User
+sfdx force:user:permset:assign -u PLP-subscriber -n Feature_Access_Demo_User -o PLP-test-user
 ```
+
+## Step Twelve: Open the subscriber demo scratch org as the TEST user in a DIFFERENT browser.
+* The goal here is for you to simulate TWO user personas, the org ADMIN and a standard USER. 
+* The easiset way to do this is to open the USER persona in a browser that is not your system default.
+* The `-b` flag of the `force:org:open` command allows you to specify which browser the CLI will use when "opening" an org.  The available options are:
+    * `chrome`
+    * `firefox`
+    * `edge`
+* Execute the command below, making sure to specify a browser that **is not your system default**.
+    * For example, if your system default browser is Chrome, specify either `firefox` or `safari` 
+* IMPORTANT: If you do not have one of the alternative browsers installed on your machine, you can follow along with this demo as long as you switch user contexts.
+```
+sfdx force:org:open -u PLP-test-user -b firefox
+```
+
+## Step Thirteen: Open the "Feature Access Check" demo page.
+
+
+## Step Fourteen: Assign the Custom PSL for Feature A.
+
+
+## Step Fifteen: Try the "access check" demo page again.
+
+
+
+
 
 
 
