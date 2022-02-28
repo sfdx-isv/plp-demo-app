@@ -3,21 +3,15 @@
         {
             "path": "force-app",
             "default": true,
-            "package": "PLP Demo (2GP)",
-            "versionName": "ver 6.0",
-            "versionNumber": "6.0.0.NEXT"
+            "package": "PLP Demo (2GPv2)",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
         }
     ],
     "namespace": "plpdp_vmc01",
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "54.0",
     "packageAliases": {
-        "PLP Demo (2GP)": "0Ho8c000000XZG5CAO",
-        "PLP Demo (2GP)@1.0.0-1": "04t8c000000ptSUAAY",
-        "PLP Demo (2GP)@2.0.0-1": "04t8c000000q72XAAQ",
-        "PLP Demo (2GP)@3.0.0-1": "04t8c000000q7dmAAA",
-        "PLP Demo (2GP)@4.0.0-1": "04t8c000000q7iEAAQ",
-        "PLP Demo (2GP)@5.0.0-1": "04t8c000000q8mmAAA",
-        "PLP Demo (2GP)@6.0.0-1": "04t8c000000q8qzAAA"
+        "PLP Demo (2GPv2)": "0Ho8c000000wk2iCAA"
     }
 }
