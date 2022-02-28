@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Feature_A</name>
+    </customPermissions>
+    <description>Grants assigned users access to &quot;FeatureA&quot;. Users must be assigned a &quot;Demo FeatureA&quot; Permission Set License before this permission set can be assigned to them.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>FeatureA User</label>
+</PermissionSet>

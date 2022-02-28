@@ -5,8 +5,7 @@
       "default": true
     }
   ],
-  "name": "testproject",
-  "namespace": "",
+  "namespace": "plpdp_??????",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "54.0"
 }

@@ -4,6 +4,12 @@
 
 package.xml
 
+# Ignore all profiles and settings for PLP demo apps.
+# If you use the PLP demo source as the base for your own
+# project, you may want to remove the two lines, below.
+**profiles
+**settings
+
 # LWC configuration files
 **/jsconfig.json
 **/.eslintrc.json
