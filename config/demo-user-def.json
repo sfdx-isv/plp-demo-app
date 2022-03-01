@@ -1,0 +1,8 @@
+{
+  "FirstName": "Demo User",
+  "LastName": "(Non-Admin)",
+  "Alias": "DemoUser",
+  "profileName": "Standard User",
+  "permsets": ["Feature_Access_Demo"],
+  "generatePassword": true
+}
