@@ -60,7 +60,7 @@ sfdx force:user:create -a PLP-demo-user -f config/demo-user-def.json -u PLP-admi
 
 
 
-# PART TWO: Experience PLP from the subscriber's perspective.
+# PART TWO: Experience PLP from the package subscriber's perspective.
 In the second part of this demo, you'll interact with the subscriber scratch org using two different users. 
 * The DEMO user simulates a standard user within the subscriber's org
 * The ADMIN user simulates a system administrator within the subscriber's org.
