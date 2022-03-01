@@ -3,7 +3,7 @@
         {
             "path": "force-app",
             "default": true,
-            "package": "PLP Demo (2GPv2)",
+            "package": "PLP Demo",
             "versionName": "ver 1.0",
             "versionNumber": "1.0.0.NEXT"
         }
@@ -12,8 +12,7 @@
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "54.0",
     "packageAliases": {
-        "PLP Demo (2GPv2)": "0Ho8c000000wk2iCAA",
-        "PLP Demo (2GPv2)@0.1.0-1": "04t8c000001MQJDAA4",
-        "PLP Demo (2GPv2)@1.0.0-1": "04t8c000001MQNQAA4"
+        "PLP Demo": "0Ho8c000000wk2nCAA",
+        "PLP Demo@1.0.0-1": "04t8c000001MQiJAAW"
     }
 }
