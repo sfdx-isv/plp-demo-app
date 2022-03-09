@@ -60,7 +60,7 @@ sfdx config:set defaultdevhubusername=DevHub:PLP-Dev-Preview
 
 ## Update the `namespace` value in `sfdx-project.json`
 1. Open the `sfdx-project.json` file in the `plp-demo-app` directory using a text/source editor (e.g. VS Code).
-2. Go to **LINE 8** and replace `plpdp_??????` with the namespace from the Partner Developer Edition org that you created for this developer preview.
+2. Go to **LINE 11** and replace `plpdp_??????` with the namespace from the Partner Developer Edition org that you created for this developer preview.
     * Your namespace MUST begin with `plpdp_`.
 3. Make sure that your namespace is linked to your PLP-enabled Dev Hub.
     * See [Linking a Namespace to a Dev Hub Org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_reg_namespace.htm) for detailed instructions.
