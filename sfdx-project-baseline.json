@@ -1,11 +1,14 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app",
-      "default": true
-    }
-  ],
-  "namespace": "plpdp_??????",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "54.0"
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "versionName": "ver 1.0",
+            "versionNumber": "1.0.0.NEXT",
+            "package": ""
+        }
+    ],
+    "namespace": "plpdp_??????",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "54.0"
 }
