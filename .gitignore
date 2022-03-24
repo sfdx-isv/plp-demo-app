@@ -8,6 +8,9 @@
 .localdevserver/
 deploy-options.json
 
+# Converted MDAPI source
+mdapi-source/
+
 # LWC VSCode autocomplete
 **/lwc/jsconfig.json
 
