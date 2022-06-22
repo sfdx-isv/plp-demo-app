@@ -3,5 +3,6 @@
     <customPermissions>
         <name>Feature_B</name>
     </customPermissions>
+    <licenseExpirationPolicy>AllowNamespaceAccess</licenseExpirationPolicy>
     <label>Demo FeatureB</label>
 </PermissionSetLicenseDefinition>
