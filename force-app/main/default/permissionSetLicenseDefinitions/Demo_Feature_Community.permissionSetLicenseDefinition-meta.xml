@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSetLicenseDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
     <customPermissions>
+        <name>Feature_A</name>
+    </customPermissions>
+    <customPermissions>
         <name>Feature_B</name>
     </customPermissions>
     <licenseExpirationPolicy>BlockNamespaceAccess</licenseExpirationPolicy>
-    <userLicenseRestrictions>${internal}</userLicenseRestrictions>
-    <label>Demo FeatureB</label>
+    <userLicenseRestrictions>${communities},${communitiesLogin}</userLicenseRestrictions>
+    <label>Demo Feature A And B In Community</label>
 </PermissionSetLicenseDefinition>

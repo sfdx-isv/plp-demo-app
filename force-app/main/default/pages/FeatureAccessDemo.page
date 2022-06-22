@@ -29,6 +29,14 @@
                 <apex:pageBlockSectionItem > 
                     <apex:outputText value="{!canAccessFeatureB}" style="color: {!featureBAccessResultColor};"/>
                 </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                    <apex:commandButton value="Can I access Feature C?" action="{!checkAccessFeatureC}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem > 
+                    <apex:outputText value="{!canAccessFeatureC}" style="color: {!featureCAccessResultColor};"/>
+                </apex:pageBlockSectionItem>
             </apex:pageBlockSection>
         </apex:pageBlock>
     </apex:form>
