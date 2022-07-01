@@ -8,5 +8,5 @@
     </customPermissions>
     <licenseExpirationPolicy>BlockNamespaceAccess</licenseExpirationPolicy>
     <userLicenseRestrictions>${communities},${communitiesLogin}</userLicenseRestrictions>
-    <label>Demo Feature A And B In Community</label>
+    <label>Demo Feature A And B in Experience Cloud</label>
 </PermissionSetLicenseDefinition>

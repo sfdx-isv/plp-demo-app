@@ -19,12 +19,12 @@ private class FeatureAccessDemoControllerTest {
     }
 
     @isTest
-    static void testFeatureAccessByCustomPermissionFeatureC() {
+    static void testFeatureAccessByCustomPermissionFeatureD() {
         string accessSuccess = 'Yes, you can!';
         FeatureAccessDemoController featureAccessController = new FeatureAccessDemoController();
-        featureAccessController.checkAccessFeatureC();
+        featureAccessController.checkAccessFeatureD();
         
-        System.assertEquals(featureAccessController.canAccessFeatureC, accessSuccess);
+        System.assertEquals(featureAccessController.canAccessFeatureD, accessSuccess);
     }
     
     @isTest

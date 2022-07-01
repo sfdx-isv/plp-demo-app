@@ -31,11 +31,11 @@
                 </apex:pageBlockSectionItem>
 
                 <apex:pageBlockSectionItem >
-                    <apex:commandButton value="Can I access Feature C?" action="{!checkAccessFeatureC}"/>
+                    <apex:commandButton value="Can I access Feature D?" action="{!checkAccessFeatureD}"/>
                 </apex:pageBlockSectionItem>
                 
                 <apex:pageBlockSectionItem > 
-                    <apex:outputText value="{!canAccessFeatureC}" style="color: {!featureCAccessResultColor};"/>
+                    <apex:outputText value="{!canAccessFeatureD}" style="color: {!featureDAccessResultColor};"/>
                 </apex:pageBlockSectionItem>
             </apex:pageBlockSection>
         </apex:pageBlock>

@@ -1,22 +1,21 @@
 public class FeatureAccessDemoController {
     public string canAccessFeatureA {get; set;}
     public string canAccessFeatureB {get; set;}
-    public string canAccessFeatureC {get; set;}
+    public string canAccessFeatureD {get; set;}
 
     public string featureAAccessResultColor {get; set;}
     public string featureBAccessResultColor {get; set;}
-    public string featureCAccessResultColor {get; set;}
+    public string featureDAccessResultColor {get; set;}
     
     string featureALCP = 'Feature_A';
     string featureBLCP = 'Feature_B';
-    string featureCLCP = 'Feature_C';
+    string featureDLCP = 'Feature_D';
     
     string accessSuccess = 'Yes, you can!';
     string accessFailure = 'Nope';
     
     string accessSuccessColor = 'DarkGreen';
     string accessFailureColor = 'DarkRed';
-    
     
     Public PageReference checkAccessFeatureA() {    
         if (LicensingUtil.hasAccessToLCP(featureALCP)) {
@@ -40,13 +39,13 @@ public class FeatureAccessDemoController {
         return Page.FeatureAccessDemo;
     }
 
-    Public PageReference checkAccessFeatureC() {    
-        if (LicensingUtil.hasAccessToLCP(featureCLCP)) {
-            canAccessFeatureC = accessSuccess;
-            featureCAccessResultColor = accessSuccessColor;
+    Public PageReference checkAccessFeatureD() {    
+        if (LicensingUtil.hasAccessToLCP(featureDLCP)) {
+            canAccessFeatureD = accessSuccess;
+            featureDAccessResultColor = accessSuccessColor;
         } else {
-            canAccessFeatureC = accessFailure;
-            featureCAccessResultColor = accessFailureColor;
+            canAccessFeatureD = accessFailure;
+            featureDAccessResultColor = accessFailureColor;
         }
         return Page.FeatureAccessDemo;
     }
