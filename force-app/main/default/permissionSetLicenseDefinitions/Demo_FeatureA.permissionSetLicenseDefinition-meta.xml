@@ -3,5 +3,7 @@
     <customPermissions>
         <name>Feature_A</name>
     </customPermissions>
+    <licenseExpirationPolicy>BlockNamespaceAccess</licenseExpirationPolicy>
+    <userLicenseRestrictions>${internal}</userLicenseRestrictions>
     <label>Demo FeatureA</label>
 </PermissionSetLicenseDefinition>

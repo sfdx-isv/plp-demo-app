@@ -17,6 +17,15 @@ private class FeatureAccessDemoControllerTest {
         
         System.assertEquals(featureAccessController.canAccessFeatureB, accessSuccess);
     }
+
+    @isTest
+    static void testFeatureAccessByCustomPermissionFeatureD() {
+        string accessSuccess = 'Yes, you can!';
+        FeatureAccessDemoController featureAccessController = new FeatureAccessDemoController();
+        featureAccessController.checkAccessFeatureD();
+        
+        System.assertEquals(featureAccessController.canAccessFeatureD, accessSuccess);
+    }
     
     @isTest
     static void testLicensingUtilHasAccessToLCP() {     
